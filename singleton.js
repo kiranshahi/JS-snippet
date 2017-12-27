@@ -35,13 +35,13 @@
             },
 
             invokeAjax: function(){
-                cat.config.method = "method";
-                cat.config.data = JSON.stringify({
+                Singleton.config.method = "method";
+                Singleton.config.data = JSON.stringify({
                     param1: value1
                 });
-                cat.config.successMethod = cat.invokeAjaxSuccess;
-                cat.config.failureMethod = cat.invokeAjaxFailure;
-                cat.ajaxCall(cat.config);
+                Singleton.config.successMethod = Singleton.invokeAjaxSuccess;
+                Singleton.config.failureMethod = Singleton.invokeAjaxFailure;
+                Singleton.ajaxCall(Singleton.config);
             },
 
             invokeAjaxSuccess: function(data){
